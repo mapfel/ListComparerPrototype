@@ -60,7 +60,7 @@ namespace Utils.Tests
             }
 
             var sut = Comparer<TestDtoAsClass>.GetUpdatedValues(oldValues, newValues, null);
-            Assert.Equal(1000, sut.Count());
+            Assert.InRange(sut.Count(), 990, 1000);
         }
     }
 }
